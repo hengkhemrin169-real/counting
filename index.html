@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#075985">
+
+    <title>KHEMRIN - AI People Counter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>កម្មវិធីសម្រាប់រាប់ចំនួនមនុស្ស</h1>
+        <p>ថតភ្លាមៗដោយប្រើ AI</p>
+    </header>
+
+    <!-- LIVE CAMERA -->
+
+    <section class="section">
+
+        <h2>ការរកឃើញចំនួនមនុស្ស</h2>
+
+        <div class="counter-box">
+            <h3 id="total">0</h3>
+            <p>បច្ចុប្បន្នមនុស្សមាន</p>
+        </div>
+
+        <div class="camera">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <p id="status" class="status">
+            សូមចុចចាប់ផ្ដើម Camera
+        </p>
+
+        <div class="button-group">
+
+            <button
+                type="button"
+                id="startBtn"
+                onclick="startCamera()">
+                📷 ចាប់ផ្ដើម Camera
+            </button>
+
+            <button
+                type="button"
+                id="switchBtn"
+                onclick="switchCamera()">
+                🔄 ប្ដូរ Camera មុខ / ក្រោយ
+            </button>
+
+            <button
+                type="button"
+                id="stopBtn"
+                onclick="stopCamera()">
+                ⏹ ឈប់ Camera
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- IMAGE UPLOAD -->
+
+    <section class="section upload-section">
+
+        <h2>សូមបញ្ចូលរូបភាព</h2>
+
+        <p>
+            ជ្រើសរើសរូបភាពដើម្បីរាប់មនុស្សដោយស្វ័យប្រវត្តិ។
+        </p>
+
+        <label for="imageUpload" class="upload-label">
+            📁 ជ្រើសរើសរូបភាព
+        </label>
+
+        <input
+            type="file"
+            id="imageUpload"
+            accept="image/*">
+
+        <button
+            type="button"
+            id="countBtn"
+            onclick="countImagePeople()">
+            រាប់មនុស្សក្នុងរូបភាព
+        </button>
+
+        <div class="image-result">
+            <canvas id="imageCanvas"></canvas>
+        </div>
+
+        <div class="image-counter">
+            <h3 id="imageCount">0</h3>
+            <p>មនុស្សក្នុងរូបភាពមានចំនួន</p>
+        </div>
+
+        <p id="imageStatus" class="status">
+            សូមជ្រើសរើសរូបភាព
+        </p>
+
+    </section>
+
+    <footer>
+        <p>រក្សាសិទ្ធគ្រប់យ៉ាងដោយលោកគ្រូ ហេង ខេមរឹន្ធ</p>
+        <p>ផ្នែក IT នៃសាលាពន្លកខ្មែរ</p>
+    </footer>
+
+</div>
+
+
+<!-- AI LIBRARIES -->
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.3/dist/coco-ssd.min.js"></script>
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

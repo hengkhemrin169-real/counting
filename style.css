@@ -1,0 +1,271 @@
+
+/* ==========================================
+   KHEMRIN RESPONSIVE DESIGN
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Khmer OS", sans-serif;
+    background: #f0f4f8;
+    color: #1e293b;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    background: linear-gradient(135deg, #075985, #2563eb);
+    color: white;
+    padding: 30px 15px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 28px;
+    line-height: 1.7;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 17px;
+}
+
+/* SECTIONS */
+
+.section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+    text-align: center;
+    color: #075985;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* COUNTERS */
+
+.counter-box,
+.image-counter {
+    text-align: center;
+    background: #eff6ff;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.counter-box h3,
+.image-counter h3 {
+    font-size: 45px;
+    color: #16a34a;
+}
+
+/* CAMERA AND IMAGE */
+
+.camera,
+.image-result {
+    width: 100%;
+    overflow: hidden;
+    background: #111827;
+    border-radius: 12px;
+    margin: 15px 0;
+    text-align: center;
+    min-height: 100px;
+}
+
+#canvas,
+#imageCanvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* BUTTONS */
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+button,
+.upload-label {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.2s;
+    font-family: inherit;
+}
+
+button:hover,
+.upload-label:hover {
+    filter: brightness(0.9);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button-group button {
+    flex: 1;
+}
+
+#switchBtn {
+    background: #7c3aed;
+}
+
+#stopBtn {
+    background: #dc2626;
+}
+
+/* UPLOAD */
+
+.upload-section > p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.upload-label {
+    display: block;
+    width: 100%;
+    background: #059669;
+    margin-bottom: 15px;
+    min-height: 48px;
+}
+
+#imageUpload {
+    display: none;
+}
+
+#countBtn {
+    width: 100%;
+    background: #2563eb;
+}
+
+/* STATUS */
+
+.status {
+    text-align: center;
+    margin: 15px 0;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+    color: #475569;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    color: #64748b;
+    line-height: 1.8;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 12px;
+    }
+
+    header {
+        padding: 22px 12px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .section {
+        padding: 17px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .counter-box h3,
+    .image-counter h3 {
+        font-size: 38px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 8px;
+    }
+
+    header {
+        border-radius: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 13px;
+        border-radius: 10px;
+    }
+
+    .section h2 {
+        font-size: 18px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group button {
+        width: 100%;
+        min-height: 50px;
+    }
+
+    button,
+    .upload-label {
+        min-height: 48px;
+        font-size: 15px;
+    }
+
+    .counter-box h3,
+    .image-counter h3 {
+        font-size: 35px;
+    }
+
+    .camera,
+    .image-result {
+        border-radius: 8px;
+    }
+}
